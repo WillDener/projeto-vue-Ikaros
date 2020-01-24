@@ -1,0 +1,135 @@
+  /*firestore() {
+    return {
+      forms: {
+        ref: firebase.firestore.collection("forms"),
+        objects: true
+      }
+    };
+  }*/
+      /*console.log("chegou aqui");
+    firebase
+      .firestore()
+      .collection("primeiro-sem-bd")
+      .get()
+      .then(querysnapShot => {
+        querysnapShot.forEach(doc => {
+          console.log(doc.id, " => ", doc.data());
+          //this.primeirosem.push(doc.data());
+        });
+      });
+    console.log("chegou no final");*/
+
+
+        addTeste(){
+      firebase
+        .firestore()
+        .collection('forms')
+        .add({
+          nome: this.form.nome,
+          sobrenome: this.form.sobrenome
+        });
+      
+      this.form.nome = "";
+      this.form.sobrenome = "";
+    },
+
+        getForms() {
+      var dbRef = db.collection("forms");
+      dbRef.onSnapShot(snap => {
+        this.array = [];
+        snap.forEach(doc => {
+          console.log(doc.id, doc.data());
+          this.forms.push(doc.data());
+          this.array.push(doc.data());
+        });
+      });
+    },
+
+    <label>Nome</label>        
+        <b-form-input size="sm" type="text" v-model="form.nome" placeholder="Nome" id='nome'/>
+        <br />
+        <b-form-input size="sm" type="text" v-model="form.sobrenome" placeholder="Sobrenome" id='nome'/>
+        <br />
+        <center>
+          <b-button variant="outline-info" @click="addTeste">ADD</b-button>
+        </center>
+        <br />
+
+        
+    var aux = firebase
+      .firestore()
+      .collection('any')
+      .doc('one');
+    
+    aux.set({
+      nome: this.n,
+      idade: this.m,
+      ra: this.w,
+      curso: this.c,
+      periodo: this.r,
+      semestre: this.t,      
+    })
+
+
+    var dir = firebase
+        .firestore().collection('other').doc(this.w)
+      for (this.i in this.y){
+        console.log(this.i.name,this.i.status,this.i.nota)
+        dir.push().set({
+          materia: [{nome:this.i.nome, status:this.i.status, nota:this.i.nota}]
+      }) 
+      }
+
+      materias: [
+            {nome:this.y[0].nome, status: this.y[0].status, nota: this.y[0].nota},
+            {nome:this.y[1].nome, status: this.y[1].status, nota: this.y[1].nota},
+            {nome:this.y[2].nome, status: this.y[2].status, nota: this.y[2].nota},
+            {nome:this.y[3].nome, status: this.y[3].status, nota: this.y[3].nota},
+            {nome:this.y[4].nome, status: this.y[4].status, nota: this.y[4].nota},
+            {nome:this.y[5].nome, status: this.y[5].status, nota: this.y[5].nota},
+            {nome:this.y[6].nome, status: this.y[6].status, nota: this.y[6].nota},
+            {nome:this.y[7].nome, status: this.y[7].status, nota: this.y[7].nota},
+            {nome:this.y[8].nome, status: this.y[8].status, nota: this.y[8].nota},
+            {nome:this.y[9].nome, status: this.y[9].status, nota: this.y[9].nota},
+            {nome:this.y[10].nome, status: this.y[10].status, nota: this.y[10].nota},
+            {nome:this.y[11].nome, status: this.y[11].status, nota: this.y[11].nota},
+            {nome:this.y[12].nome, status: this.y[12].status, nota: this.y[12].nota},
+            {nome:this.y[13].nome, status: this.y[13].status, nota: this.y[13].nota},
+            {nome:this.y[14].nome, status: this.y[14].status, nota: this.y[14].nota},
+            {nome:this.y[15].nome, status: this.y[15].status, nota: this.y[15].nota},
+            {nome:this.y[16].nome, status: this.y[16].status, nota: this.y[16].nota},
+            {nome:this.y[17].nome, status: this.y[17].status, nota: this.y[17].nota},
+            {nome:this.y[18].nome, status: this.y[18].status, nota: this.y[18].nota},
+            {nome:this.y[19].nome, status: this.y[19].status, nota: this.y[19].nota},
+            {nome:this.y[20].nome, status: this.y[20].status, nota: this.y[20].nota},
+            {nome:this.y[21].nome, status: this.y[21].status, nota: this.y[21].nota},
+            {nome:this.y[22].nome, status: this.y[22].status, nota: this.y[22].nota},
+            {nome:this.y[23].nome, status: this.y[23].status, nota: this.y[23].nota},
+            {nome:this.y[24].nome, status: this.y[24].status, nota: this.y[24].nota},
+            {nome:this.y[25].nome, status: this.y[25].status, nota: this.y[25].nota},
+            {nome:this.y[26].nome, status: this.y[26].status, nota: this.y[26].nota},
+            {nome:this.y[27].nome, status: this.y[27].status, nota: this.y[27].nota},
+            {nome:this.y[28].nome, status: this.y[28].status, nota: this.y[28].nota},
+            {nome:this.y[29].nome, status: this.y[29].status, nota: this.y[29].nota},
+            {nome:this.y[30].nome, status: this.y[30].status, nota: this.y[30].nota},
+            {nome:this.y[31].nome, status: this.y[31].status, nota: this.y[31].nota},
+            {nome:this.y[32].nome, status: this.y[32].status, nota: this.y[32].nota},
+            {nome:this.y[33].nome, status: this.y[33].status, nota: this.y[33].nota},
+            {nome:this.y[34].nome, status: this.y[34].status, nota: this.y[34].nota},
+            {nome:this.y[35].nome, status: this.y[35].status, nota: this.y[35].nota},
+            {nome:this.y[36].nome, status: this.y[36].status, nota: this.y[36].nota},
+            {nome:this.y[37].nome, status: this.y[37].status, nota: this.y[37].nota},
+            {nome:this.y[38].nome, status: this.y[38].status, nota: this.y[38].nota},
+            {nome:this.y[39].nome, status: this.y[39].status, nota: this.y[39].nota},
+            {nome:this.y[40].nome, status: this.y[40].status, nota: this.y[40].nota},
+            {nome:this.y[41].nome, status: this.y[41].status, nota: this.y[41].nota},
+            {nome:this.y[42].nome, status: this.y[42].status, nota: this.y[42].nota},
+            {nome:this.y[43].nome, status: this.y[43].status, nota: this.y[43].nota},
+            {nome:this.y[44].nome, status: this.y[44].status, nota: this.y[44].nota},
+            {nome:this.y[45].nome, status: this.y[45].status, nota: this.y[45].nota},
+            {nome:this.y[46].nome, status: this.y[46].status, nota: this.y[46].nota},
+            {nome:this.y[47].nome, status: this.y[47].status, nota: this.y[47].nota},
+            {nome:this.y[48].nome, status: this.y[48].status, nota: this.y[48].nota},
+            {nome:this.y[49].nome, status: this.y[49].status, nota: this.y[49].nota},
+            {nome:this.y[50].nome, status: this.y[50].status, nota: this.y[50].nota},
+            ]       
