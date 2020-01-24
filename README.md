@@ -2,7 +2,7 @@
 
 formulário dedicado à coletar dados de alunos da faculdade para realização de data mining.
 
-## Vue + Vuex / Firebase + Firestore / Knime + JavaScript
+## Vue + Vuex / Firebase + Firestore
 
 ## Project setup
 ```
