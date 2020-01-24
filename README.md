@@ -1,4 +1,8 @@
-# ikaros
+# ikaros-project
+
+formulário dedicado à coletar dados de alunos da faculdade para realização de data mining.
+
+## Vue + Vuex / Firebase + Firestore / Knime + JavaScript
 
 ## Project setup
 ```
