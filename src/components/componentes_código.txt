@@ -125,11 +125,5 @@
             {nome:this.y[41].nome, status: this.y[41].status, nota: this.y[41].nota},
             {nome:this.y[42].nome, status: this.y[42].status, nota: this.y[42].nota},
             {nome:this.y[43].nome, status: this.y[43].status, nota: this.y[43].nota},
-            {nome:this.y[44].nome, status: this.y[44].status, nota: this.y[44].nota},
-            {nome:this.y[45].nome, status: this.y[45].status, nota: this.y[45].nota},
-            {nome:this.y[46].nome, status: this.y[46].status, nota: this.y[46].nota},
-            {nome:this.y[47].nome, status: this.y[47].status, nota: this.y[47].nota},
-            {nome:this.y[48].nome, status: this.y[48].status, nota: this.y[48].nota},
-            {nome:this.y[49].nome, status: this.y[49].status, nota: this.y[49].nota},
-            {nome:this.y[50].nome, status: this.y[50].status, nota: this.y[50].nota},
-            ]       
+            {nome:this.y[44].nome, status: this.y[44].status, nota: this.y[44].nota}                        
+            ]   

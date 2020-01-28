@@ -2,34 +2,32 @@
     <div>        
         <b-container>            
             
-            <b-row class="my-1">
-                <b-col sm="1"><label for='nome'>Nome:</label></b-col>
-                <b-col sm="11" ><b-form-input size="sm" type="text" v-model="nome" placeholder="Nome Completo" id='nome'/></b-col>
+            <b-row class="my-1">                
+                <b-col sm="12" ><b-form-input size="sm" type="text" v-model="nome" placeholder="Nome Completo" id='nome'/></b-col>
             </b-row>
-            <b-row class="my-1">
-                <b-col sm="1"><label for='idade'>Idade:</label></b-col>
-                <b-col sm="2"><b-form-input size="sm" type="number" v-model="idade" placeholder="Idade" id='idade'/></b-col>
-                <b-col sm="1">
-                    <label for="ra">RA:</label>
-                </b-col>
-                <b-col sm="8"><b-form-input size="sm" type="text" v-model="ra" placeholder="RA do aluno"/></b-col>
+            <b-row class="my-1 justify-content-md-center">              
+                <b-col sm="2"><b-form-input size="sm" type="number" v-model="idade" placeholder="Idade" id='idade'/></b-col>            
+                <b-col sm="6" md="auto"><b-form-input size="sm" type="text" v-model="ra" placeholder="RA do aluno"/></b-col>
             </b-row>   
                              
-            <b-card bg-variant="dark">
-                <b-form-select v-model="curso" :options="cursos" size="sm">
-                </b-form-select>                
-            </b-card> 
-            <b-card-group >
-            <!-- com a opção deck no group ficam separados os cards -->
-                <b-card bg-variant="dark">
+            <b-row class="my-1">
+                <b-col sm="12">
+                    <b-form-select v-model="curso" :options="cursos" size="sm">
+                    </b-form-select>                 
+                </b-col>
+            </b-row>
+            
+            <b-row class="my-1">
+                <b-col sm="6">
                     <b-form-select v-model="semestre" :options="semestres" size="sm">
                     </b-form-select>
-                </b-card>
-                <b-card bg-variant="dark">
+                </b-col>            
+                <b-col sm="6">
                     <b-form-select v-model="periodo" :options="periodos" size="sm">
-                    </b-form-select>
-                </b-card>
-            </b-card-group>                    
+                    </b-form-select>   
+                </b-col>               
+            </b-row>
+
         </b-container>                
     </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container>
-      <b-card border-variant="dark">        
+      <b-card border-variant="dark" bg-variant="light">        
         <div>
           <ul>
             <li v-for="form in formulario" :key="form">
@@ -17,10 +17,9 @@
           <Materias />
         </div>
         <div>
-          <b-button variant="outline-primary" @click="saveForm">Enviar</b-button>          
+          <b-button variant="outline-primary" @click="saveForm">Enviar</b-button>                   
         </div>
-      </b-card>
-      <div>{{ this.y.length }}</div>
+      </b-card>      
     </b-container>
   </div>
 </template>
@@ -50,18 +49,26 @@ export default {
     saveForm() {
       firebase        
         .firestore()
-        .collection('another').doc(this.w)
+        .collection('formulario').doc(this.w)
         .set({
           nome: this.n,
           idade: this.m,
           ra: this.w,
           curso: this.c,
           periodo: this.r,
-          semestre: this.t,
-                     
-        });// falta fazer um for para passar materia dentro do array do bd, a dificuldade ta em justamente fazer um parelelo de uma função de inserção com o for           
-            
-      //Fazer uma tela de mensagem e configurar 
+          semestre: this.t,                     
+        });
+      this.saveMateria()
+    },
+    saveMateria(){
+      for (var i = 0; i < this.y.length; i++){
+        firebase
+          .firestore()    
+          .collection('formulario').doc(this.w)
+          .update({
+            materias: firebase.firestore.FieldValue.arrayUnion({nome: this.y[i].nome, status: this.y[i].status, nota: this.y[i].nota})            
+          });
+      }     
     }
   },
   computed: {
